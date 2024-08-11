@@ -17,7 +17,7 @@ anya(
         const text = args.join(' ');
         const group = await anyaV2.groupCreate(text, [config.ownernumber + '@s.whatsapp.net']);
         console.log('Created group with ID:', group);
-        pika.reply(group.toString());
+        pika.reply(`${group.toString()}`);
       //  anyaV2.sendMessage(group.gid, { text: 'Hello there' }); // Say hello to everyone in the group
     }
 );

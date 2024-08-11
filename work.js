@@ -19,6 +19,7 @@ anya(
         },
     async (anyaV2, pika, { args }) => {
         if (!args[0]) return pika.reply("_❕Enter some texts to create!_");
+        const text = args.join(" ");
         const { key } = await pika.keyMsg("```Creating...```");
         const group = await anyaV2.groupCreate(text, [config.ownernumber + "@s.whatsapp.net"])
 console.log ("created group with id: " + group.gid)
